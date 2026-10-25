@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cklaujjrcr3ek"]
+
+[ext_resource type="AudioStream" uid="uid://btd8wxufar5m2" path="res://assets/musica.wav" id="1_wtq27"]
+[ext_resource type="Script" uid="uid://bevst3uegdt3h" path="res://scripts/musica.gd" id="2_wtq27"]
+[ext_resource type="AudioStream" uid="uid://4bn7ktncwsxe" path="res://assets/passar de fase.wav" id="3_f5m7v"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" unique_id=1818959046]
+stream = ExtResource("1_wtq27")
+autoplay = true
+script = ExtResource("2_wtq27")
+
+[node name="next fase" type="AudioStreamPlayer" parent="." unique_id=618070583]
+stream = ExtResource("3_f5m7v")
+volume_db = -30.0

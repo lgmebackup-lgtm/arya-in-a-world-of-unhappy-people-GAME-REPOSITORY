@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bfwhq6y3x5p63"]
+
+[node name="rain" type="Node2D" unique_id=453011000]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=332187035]
+position = Vector2(12, -67)
+amount = 200
+lifetime = 0.6
+emission_shape = 3
+emission_rect_extents = Vector2(130, 1)
+gravity = Vector2(-200, 980)
+scale_amount_min = 0.2
+color = Color(0, 0.54901963, 1, 1)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1399860259]
+zoom = Vector2(5, 5)

@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://dgeyubf586lvi"]
+
+[ext_resource type="Script" uid="uid://dr06a6yo6ttsv" path="res://scripts/dialoguesystem.gd" id="1_mr0g3"]
+[ext_resource type="FontFile" uid="uid://ce2iotk1jrjr4" path="res://assets/PressStart2P-Regular.ttf" id="2_mr0g3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g4v7s"]
+bg_color = Color(0.1764706, 0.15294118, 0.18431373, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[node name="dialoguesystem" type="Node2D" unique_id=818746810]
+z_index = 4096
+script = ExtResource("1_mr0g3")
+metadata/_edit_vertical_guides_ = [0.0, 1152.0]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=642245085]
+max_polyphony = 1000
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=899166180]
+
+[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=631005431]
+offset_left = 288.0
+offset_top = 492.0
+offset_right = 576.0
+offset_bottom = 548.0
+scale = Vector2(2, 2)
+theme_override_styles/panel = SubResource("StyleBoxFlat_g4v7s")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=1467954373]
+offset_left = 288.0
+offset_top = 492.0
+offset_right = 576.0
+offset_bottom = 548.0
+scale = Vector2(2, 2)
+
+[node name="speakerparent" type="Control" parent="CanvasLayer/HBoxContainer" unique_id=598189451]
+custom_minimum_size = Vector2(56, 0)
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/HBoxContainer/speakerparent" unique_id=3016455]
+position = Vector2(30, 24)
+scale = Vector2(2, 2)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/HBoxContainer" unique_id=1972257790]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/HBoxContainer/VBoxContainer" unique_id=2049757187]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("2_mr0g3")
+theme_override_font_sizes/normal_font_size = 13
+bbcode_enabled = true
+text = "sdawasdasdwasd"
+scroll_active = false
+visible_characters_behavior = 1
+
+[node name="button container" type="HBoxContainer" parent="CanvasLayer/HBoxContainer/VBoxContainer" unique_id=1988698924]
+visible = false
+layout_mode = 2

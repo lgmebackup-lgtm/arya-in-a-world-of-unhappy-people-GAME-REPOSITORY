@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cikv53mmpx2q4"]
+
+[ext_resource type="Script" uid="uid://cltvgnyx6upuo" path="res://scripts/dialogue_area_2d.gd" id="1_hgp8m"]
+[ext_resource type="Texture2D" uid="uid://cisb2l70o3ktw" path="res://assets/press seta pra baixo1.png" id="2_m7vi0"]
+[ext_resource type="Texture2D" uid="uid://dwsowfc2onegn" path="res://assets/press seta pra baixo2.png" id="3_acw7g"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_m7vi0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_acw7g")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="DialogueArea2D" type="Area2D" unique_id=200552717]
+script = ExtResource("1_hgp8m")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1622291613]
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+autoplay = "default"
+frame_progress = 0.57101285
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -1,0 +1,15 @@
+Label
+RichTextLabel
+ColorRect
+CollisionShape2D
+Sprite2D
+AnimationPlayer
+AnimationTree
+AudioStreamPlayer
+Area2D
+StaticBody2D
+Marker2D
+AnimatedSprite2D
+Node2D
+TileMapLayer
+TileMap

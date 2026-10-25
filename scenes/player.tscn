@@ -1,0 +1,111 @@
+[gd_scene format=3 uid="uid://bgtqmv6ftnvlr"]
+
+[ext_resource type="Script" uid="uid://k70ht8tyco55" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://batkw8cgtbtj3" path="res://assets/arya de lado.png" id="2_qhqgy"]
+[ext_resource type="Texture2D" uid="uid://bwjga17sdbdct" path="res://assets/gota de vida.png" id="3_qhqgy"]
+[ext_resource type="AudioStream" uid="uid://bfrfkvhxmrhmy" path="res://assets/pulo.wav" id="4_qlg0r"]
+[ext_resource type="AudioStream" uid="uid://b3ta2vvhe41nb" path="res://assets/hit.wav" id="5_tuyoq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(9, 18)
+
+[sub_resource type="Curve" id="Curve_dqkch"]
+_data = [Vector2(0.2393617, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="player" type="CharacterBody2D" unique_id=683432601 groups=["player"]]
+script = ExtResource("1_g2els")
+metadata/_edit_vertical_guides_ = [80.0, 160.0]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1895532940]
+position = Vector2(0.5, 7)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=4133895]
+texture = ExtResource("2_qhqgy")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2124516986]
+
+[node name="healt1" type="Sprite2D" parent="CanvasLayer" unique_id=847036216]
+position = Vector2(199.99998, 40)
+scale = Vector2(5, 5)
+texture = ExtResource("3_qhqgy")
+
+[node name="healt2" type="Sprite2D" parent="CanvasLayer" unique_id=1009737226]
+position = Vector2(120, 40)
+scale = Vector2(5, 5)
+texture = ExtResource("3_qhqgy")
+
+[node name="healt3" type="Sprite2D" parent="CanvasLayer" unique_id=1615525836]
+position = Vector2(40.000015, 40)
+scale = Vector2(5, 5)
+texture = ExtResource("3_qhqgy")
+
+[node name="partcles_healt1" type="CPUParticles2D" parent="CanvasLayer" unique_id=1446163408]
+position = Vector2(199.99998, 40)
+scale = Vector2(5, 5)
+emitting = false
+amount = 50
+lifetime = 0.3
+one_shot = true
+explosiveness = 1.0
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 20.0
+initial_velocity_max = 50.0
+scale_amount_min = 3.0
+scale_amount_max = 5.0
+scale_amount_curve = SubResource("Curve_dqkch")
+color = Color(0.5686275, 0.7058824, 0.85882354, 1)
+
+[node name="partcles_healt3" type="CPUParticles2D" parent="CanvasLayer" unique_id=146868877]
+position = Vector2(39.999954, 41.999996)
+scale = Vector2(4.999999, 4.999999)
+emitting = false
+amount = 50
+lifetime = 0.3
+one_shot = true
+explosiveness = 1.0
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 20.0
+initial_velocity_max = 50.0
+scale_amount_min = 2.0
+scale_amount_max = 4.0
+scale_amount_curve = SubResource("Curve_dqkch")
+color = Color(0.5686275, 0.7058824, 0.85882354, 1)
+
+[node name="partcles_healt2" type="CPUParticles2D" parent="CanvasLayer" unique_id=117053676]
+position = Vector2(120, 40)
+scale = Vector2(4.9999995, 4.9999995)
+emitting = false
+amount = 50
+lifetime = 0.3
+one_shot = true
+explosiveness = 1.0
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 20.0
+initial_velocity_max = 50.0
+scale_amount_min = 4.0
+scale_amount_max = 5.0
+scale_amount_curve = SubResource("Curve_dqkch")
+color = Color(0.5686275, 0.7058824, 0.85882354, 1)
+
+[node name="coyotetimer" type="Timer" parent="." unique_id=2112598404]
+wait_time = 0.08
+one_shot = true
+
+[node name="pulo sound" type="AudioStreamPlayer" parent="." unique_id=1555997504]
+stream = ExtResource("4_qlg0r")
+volume_db = -25.0
+
+[node name="hit sound" type="AudioStreamPlayer" parent="." unique_id=1894054928]
+stream = ExtResource("5_tuyoq")
+volume_db = -10.0
+
+[node name="muzzle" type="Marker2D" parent="." unique_id=1794225459]
+position = Vector2(4, 5)
+
+[node name="muzzle_key" type="Marker2D" parent="." unique_id=729845228]
+position = Vector2(0, -17)

@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://btxk7wtvgmkln"]
+
+[ext_resource type="Script" uid="uid://bkrcpi7fcubpr" path="res://scripts/end_game.gd" id="1_uwdrl"]
+[ext_resource type="FontFile" uid="uid://ce2iotk1jrjr4" path="res://assets/PressStart2P-Regular.ttf" id="2_0py74"]
+
+[node name="end game" type="Control" unique_id=268708825]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uwdrl")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=542234356]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -460.0
+offset_top = -100.0
+offset_right = 460.0
+offset_bottom = 101.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_0py74")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "
+[wave]thanks for playing
+"
+scroll_active = false
+
+[node name="background" type="ColorRect" parent="." unique_id=305464876]
+z_index = -2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.3764706, 0.2901961, 0.6392157, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1789197416]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -138.0
+offset_top = 6.5
+offset_right = 138.0
+offset_bottom = 81.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_0py74")
+text = "
+press \"space\" to return to the lobby
+"

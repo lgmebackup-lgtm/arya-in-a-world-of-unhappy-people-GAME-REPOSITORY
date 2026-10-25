@@ -1,0 +1,201 @@
+[gd_scene format=4 uid="uid://cwbvn8sb6ge0g"]
+
+[ext_resource type="Texture2D" uid="uid://dwjm4w3ngjhqo" path="res://assets/tile and assets.png" id="1_mpbbi"]
+[ext_resource type="PackedScene" uid="uid://bgtqmv6ftnvlr" path="res://scenes/player.tscn" id="2_dqtpf"]
+[ext_resource type="Script" uid="uid://cd5bl2quguq8y" path="res://scripts/casa.gd" id="2_ye3qi"]
+[ext_resource type="Texture2D" uid="uid://crg12udtrfu3q" path="res://assets/mae no sofa.png" id="3_wui1u"]
+[ext_resource type="Texture2D" uid="uid://cod3lj06qb4on" path="res://assets/assets sala.png" id="4_ye3qi"]
+[ext_resource type="PackedScene" uid="uid://cikv53mmpx2q4" path="res://scenes/dialogue_area_2d.tscn" id="5_uum25"]
+[ext_resource type="Script" uid="uid://b1rk7w5cux5vy" path="res://dialogueexportresourse.gd" id="6_lgdna"]
+[ext_resource type="Script" uid="uid://cpmy46xgh1dox" path="res://dialoguetextresourse.gd" id="7_wui1u"]
+[ext_resource type="Texture2D" uid="uid://h0rkhcwa6325" path="res://assets/arya falando.png" id="8_uum25"]
+[ext_resource type="AudioStream" uid="uid://bw5uuyqg37k54" path="res://assets/falando.wav" id="9_wui1u"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dqtpf"]
+texture = ExtResource("1_mpbbi")
+0:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -4.1952705, 8, -4.279176, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -4.1952705, 8, -4.279176, 8, 8, -8, 8)
+3:1/0 = 0
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:2/0 = 0
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:3/0 = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_o00fh"]
+physics_layer_0/collision_layer = 1
+sources/2 = SubResource("TileSetAtlasSource_dqtpf")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g3anh"]
+texture = ExtResource("3_wui1u")
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qnyhg"]
+texture = ExtResource("4_ye3qi")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+1:2/0 = 0
+0:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_g4v7s"]
+sources/2 = SubResource("TileSetAtlasSource_qnyhg")
+sources/0 = SubResource("TileSetAtlasSource_g3anh")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(3, 35)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
+size = Vector2(4, 33)
+
+[sub_resource type="Resource" id="Resource_d0u6y"]
+script = ExtResource("7_wui1u")
+speaker_img = ExtResource("8_uum25")
+speaker_img_Hframes = 2
+text = "Mom, can I go out with my friend?"
+text_speed = 18.0
+text_sound = ExtResource("9_wui1u")
+text_volume_db = -25
+metadata/_custom_type_script = "uid://cpmy46xgh1dox"
+
+[sub_resource type="Resource" id="Resource_3gngh"]
+script = ExtResource("7_wui1u")
+text = "
+*pretends not to hear*"
+text_speed = 10.0
+text_sound = ExtResource("9_wui1u")
+text_volume_db = -25
+metadata/_custom_type_script = "uid://cpmy46xgh1dox"
+
+[sub_resource type="Resource" id="Resource_fcnqv"]
+script = ExtResource("7_wui1u")
+speaker_img = ExtResource("8_uum25")
+speaker_img_Hframes = 2
+text = "...she must be busy on her phone..."
+text_speed = 18.0
+text_sound = ExtResource("9_wui1u")
+text_volume_db = -25
+metadata/_custom_type_script = "uid://cpmy46xgh1dox"
+
+[sub_resource type="Resource" id="Resource_lgdna"]
+script = ExtResource("7_wui1u")
+text = "
+*Arya is [wave][color=#AAAAAA]neutral[/color][/wave]*"
+text_speed = 10.0
+metadata/_custom_type_script = "uid://cpmy46xgh1dox"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_57qmd"]
+size = Vector2(33, 47)
+
+[node name="casa" type="TileMapLayer" unique_id=1040370130]
+tile_map_data = PackedByteArray("AAA6ACYAAgAAAAMAAAA5ACYAAgAAAAMAAAA4ACYAAgAAAAMAAAA3ACYAAgAAAAMAAAA2ACYAAgAAAAMAAAA1ACYAAgAAAAMAAAA0ACYAAgAAAAMAAAAzACYAAgAAAAMAAAAyACYAAgAAAAMAAAAxACYAAgAAAAMAAAAwACYAAgAAAAMAAAAvACYAAgAAAAMAAAAuACYAAgAAAAMAAAAtACYAAgAAAAMAAAAsACYAAgAAAAMAAAAsACQAAgADAAAAAAAsACUAAgADAAEAAAAzACMAAgAAAAAAAAAsAB8AAgABAAIAAAAtAB8AAgABAAIAAAAuAB8AAgABAAIAAAAvAB8AAgABAAIAAAAwAB8AAgABAAIAAAAxAB8AAgABAAIAAAAyAB8AAgABAAIAAAAzAB8AAgABAAIAAAA0AB8AAgABAAIAAAA1AB8AAgABAAIAAAA2AB8AAgABAAIAAAA3AB8AAgABAAIAAAA4AB8AAgABAAIAAAA5AB8AAgABAAIAAAA6AB8AAgABAAIAAAA7AB8AAgABAAIAAAA8AB8AAgABAAIAAAA9AB8AAgABAAIAAAA9ACAAAgABAAIAAAA9ACEAAgABAAIAAAA9ACIAAgABAAIAAAA9ACMAAgABAAIAAAA9ACQAAgABAAIAAAA9ACUAAgABAAIAAAA9ACYAAgABAAMAAAA8ACYAAgAAAAMAAAA7ACYAAgAAAAMAAAAsACcAAgABAAMAAAAsACgAAgABAAMAAAAsACkAAgABAAMAAAAtACcAAgABAAMAAAAtACgAAgABAAMAAAAtACkAAgABAAMAAAAuACcAAgABAAMAAAAuACgAAgABAAMAAAAuACkAAgABAAMAAAAvACcAAgABAAMAAAAvACgAAgABAAMAAAAvACkAAgABAAMAAAAwACcAAgABAAMAAAAwACgAAgABAAMAAAAwACkAAgABAAMAAAAxACcAAgABAAMAAAAxACgAAgABAAMAAAAxACkAAgABAAMAAAAyACcAAgABAAMAAAAyACgAAgABAAMAAAAyACkAAgABAAMAAAAzACcAAgABAAMAAAAzACgAAgABAAMAAAAzACkAAgABAAMAAAA0ACcAAgABAAMAAAA0ACgAAgABAAMAAAA0ACkAAgABAAMAAAA1ACcAAgABAAMAAAA1ACgAAgABAAMAAAA1ACkAAgABAAMAAAA2ACcAAgABAAMAAAA2ACgAAgABAAMAAAA2ACkAAgABAAMAAAA3ACcAAgABAAMAAAA3ACgAAgABAAMAAAA3ACkAAgABAAMAAAA4ACcAAgABAAMAAAA4ACgAAgABAAMAAAA4ACkAAgABAAMAAAA5ACcAAgABAAMAAAA5ACgAAgABAAMAAAA5ACkAAgABAAMAAAA6ACcAAgABAAMAAAA6ACgAAgABAAMAAAA6ACkAAgABAAMAAAA7ACcAAgABAAMAAAA7ACgAAgABAAMAAAA7ACkAAgABAAMAAAA8ACcAAgABAAMAAAA8ACgAAgABAAMAAAA8ACkAAgABAAMAAAA9ACcAAgABAAMAAAA9ACgAAgABAAMAAAA9ACkAAgABAAMAAAArAB8AAgABAAIAAAArACYAAgAAAAMAAAArACcAAgABAAMAAAArACgAAgABAAMAAAArACkAAgABAAMAAAAsACMAAgABAAIAAAAsACIAAgABAAIAAAAsACEAAgABAAIAAAAsACAAAgABAAIAAAArACAAAgABAAIAAAArACEAAgABAAIAAAArACIAAgABAAIAAAArACMAAgABAAIAAAA7ACUAAgAAAAEAAAA8ACUAAgABAAEAAAAfACYAAgAAAAMAAAAeACYAAgAAAAMAAAAdACYAAgAAAAMAAAAcACYAAgAAAAMAAAAbACYAAgAAAAMAAAAYACYAAgAAAAMAAAAXACYAAgAAAAMAAAAWACYAAgAAAAMAAAAVACYAAgAAAAMAAAAUACYAAgAAAAMAAAATACYAAgAAAAMAAAASACkAAgABAAMAAAASACoAAgABAAMAAAATACoAAgABAAMAAAAUACoAAgABAAMAAAAVACoAAgABAAMAAAAWACoAAgABAAMAAAAXACoAAgABAAMAAAAYACoAAgABAAMAAAAZACoAAgABAAMAAAAaACoAAgABAAMAAAAbACoAAgABAAMAAAAcACoAAgABAAMAAAAdACoAAgABAAMAAAAeACoAAgABAAMAAAAfACoAAgABAAMAAAAgACoAAgABAAMAAAAgACkAAgABAAMAAAAgACgAAgABAAMAAAAfACgAAgABAAMAAAAfACcAAgABAAMAAAAeACcAAgABAAMAAAAdACcAAgABAAMAAAAcACcAAgABAAMAAAAbACcAAgABAAMAAAAaACcAAgABAAMAAAAZACcAAgABAAMAAAAYACcAAgABAAMAAAAXACcAAgABAAMAAAAWACcAAgABAAMAAAAVACcAAgABAAMAAAAUACcAAgABAAMAAAATACcAAgABAAMAAAATACgAAgABAAMAAAATACkAAgABAAMAAAAUACkAAgABAAMAAAAUACgAAgABAAMAAAAVACgAAgABAAMAAAAWACgAAgABAAMAAAAXACgAAgABAAMAAAAYACgAAgABAAMAAAAZACgAAgABAAMAAAAaACgAAgABAAMAAAAbACgAAgABAAMAAAAcACgAAgABAAMAAAAdACgAAgABAAMAAAAeACgAAgABAAMAAAAfACkAAgABAAMAAAAeACkAAgABAAMAAAAdACkAAgABAAMAAAAcACkAAgABAAMAAAAbACkAAgABAAMAAAAaACkAAgABAAMAAAAZACkAAgABAAMAAAAYACkAAgABAAMAAAAXACkAAgABAAMAAAAWACkAAgABAAMAAAAVACkAAgABAAMAAAAgACcAAgABAAMAAAAgACAAAgAAAAIAAAAfACAAAgAAAAIAAAAeACAAAgAAAAIAAAAdACAAAgAAAAIAAAAcACAAAgAAAAIAAAAbACAAAgAAAAIAAAAaACAAAgAAAAIAAAAZACAAAgAAAAIAAAAYACAAAgAAAAIAAAAXACAAAgAAAAIAAAAWACAAAgAAAAIAAAAVACAAAgAAAAIAAAAUACAAAgAAAAIAAAATACAAAgAAAAIAAAASACAAAgAAAAIAAAARACAAAgAAAAIAAAAQACAAAgAAAAIAAAAPACAAAgAAAAIAAAAOACAAAgAAAAIAAAANACAAAgAAAAIAAAAMACAAAgAAAAIAAAAMACEAAgAAAAIAAAAMACIAAgAAAAIAAAAMACMAAgAAAAIAAAASACYAAgAAAAMAAAARACYAAgAAAAMAAAAQACYAAgAAAAMAAAAPACYAAgAAAAMAAAAOACYAAgAAAAMAAAANACYAAgAAAAMAAAAMACYAAgAAAAMAAAAMACQAAgADAAAAAAAMACUAAgADAAEAAAASACcAAgABAAMAAAARACcAAgABAAMAAAAQACcAAgABAAMAAAAPACcAAgABAAMAAAAOACcAAgABAAMAAAANACcAAgABAAMAAAAMACcAAgABAAMAAAAMACgAAgABAAMAAAAMACkAAgABAAMAAAASACgAAgABAAMAAAARACgAAgABAAMAAAAQACgAAgABAAMAAAAPACgAAgABAAMAAAAOACgAAgABAAMAAAANACgAAgABAAMAAAANACkAAgABAAMAAAAMACoAAgABAAMAAAANACoAAgABAAMAAAAOACoAAgABAAMAAAAPACoAAgABAAMAAAAQACoAAgABAAMAAAAQACkAAgABAAMAAAAPACkAAgABAAMAAAARACkAAgABAAMAAAARACoAAgABAAMAAAAOACkAAgABAAMAAAAMACsAAgABAAMAAAAMACwAAgABAAMAAAANACwAAgABAAMAAAANAC0AAgABAAMAAAAOAC0AAgABAAMAAAAMAC0AAgABAAMAAAAPAC0AAgABAAMAAAAQAC0AAgABAAMAAAARAC0AAgABAAMAAAASAC0AAgABAAMAAAATAC0AAgABAAMAAAAUAC0AAgABAAMAAAAVAC0AAgABAAMAAAAWAC0AAgABAAMAAAAXAC0AAgABAAMAAAAYAC0AAgABAAMAAAAZAC0AAgABAAMAAAAaAC0AAgABAAMAAAAbAC0AAgABAAMAAAAcAC0AAgABAAMAAAAdAC0AAgABAAMAAAAeAC0AAgABAAMAAAAfAC0AAgABAAMAAAAgAC0AAgABAAMAAAAgACwAAgABAAMAAAAgACsAAgABAAMAAAAfACsAAgABAAMAAAAeACsAAgABAAMAAAAdACsAAgABAAMAAAAcACsAAgABAAMAAAAbACsAAgABAAMAAAAaACsAAgABAAMAAAAZACsAAgABAAMAAAAYACsAAgABAAMAAAAXACsAAgABAAMAAAAWACsAAgABAAMAAAAVACsAAgABAAMAAAAUACsAAgABAAMAAAATACsAAgABAAMAAAASACsAAgABAAMAAAANACsAAgABAAMAAAAOACsAAgABAAMAAAAPACsAAgABAAMAAAAQACsAAgABAAMAAAARACsAAgABAAMAAAAOACwAAgABAAMAAAAPACwAAgABAAMAAAAQACwAAgABAAMAAAARACwAAgABAAMAAAASACwAAgABAAMAAAATACwAAgABAAMAAAAUACwAAgABAAMAAAAVACwAAgABAAMAAAAWACwAAgABAAMAAAAXACwAAgABAAMAAAAYACwAAgABAAMAAAAZACwAAgABAAMAAAAaACwAAgABAAMAAAAbACwAAgABAAMAAAAcACwAAgABAAMAAAAdACwAAgABAAMAAAAeACwAAgABAAMAAAAfACwAAgABAAMAAAAhACYAAgAAAAMAAAAiACYAAgAAAAMAAAAjACYAAgAAAAMAAAAhACcAAgABAAMAAAAhACgAAgABAAMAAAAhACkAAgABAAMAAAAhACoAAgABAAMAAAAhACsAAgABAAMAAAAhACwAAgABAAMAAAAhAC0AAgABAAMAAAAiAC0AAgABAAMAAAAiACwAAgABAAMAAAAiACsAAgABAAMAAAAiACoAAgABAAMAAAAiACkAAgABAAMAAAAiACgAAgABAAMAAAAiACcAAgABAAMAAAAjACcAAgABAAMAAAAjACgAAgABAAMAAAAjACkAAgABAAMAAAAjACoAAgABAAMAAAAjACsAAgABAAMAAAAjACwAAgABAAMAAAAjAC0AAgABAAMAAAAjACMAAgAAAAIAAAAjACIAAgAAAAIAAAAjACEAAgAAAAIAAAAjACAAAgAAAAIAAAAiACAAAgAAAAIAAAAhACAAAgAAAAIAAAAjACQAAgADAAAAAAAjACUAAgADAAEAAAAgACYAAgAAAAMAAAALACMAAgAAAAIAAAALACIAAgAAAAIAAAALACEAAgAAAAIAAAALACAAAgAAAAIAAAALACYAAgAAAAMAAAALACcAAgABAAMAAAALACgAAgABAAMAAAALACkAAgABAAMAAAALACoAAgABAAMAAAALACsAAgABAAMAAAALACwAAgABAAMAAAALAC0AAgABAAMAAAAkACMAAgAAAAIAAAAkACIAAgAAAAIAAAAkACEAAgAAAAIAAAAkACAAAgAAAAIAAAAkACYAAgAAAAMAAAAkACcAAgABAAMAAAAkACgAAgABAAMAAAAkACkAAgABAAMAAAAkACoAAgABAAMAAAAkACsAAgABAAMAAAAkACwAAgABAAMAAAAkAC0AAgABAAMAAAAKACQAAgAAAAIAAAAKACUAAgAAAAIAAAAKACYAAgAAAAIAAAAKACMAAgAAAAIAAAAKACIAAgAAAAIAAAAqACQAAgAAAAIAAAAqACUAAgAAAAIAAAAlACQAAgAAAAIAAAAlACUAAgAAAAIAAAAZACYAAgAAAAMAAAAaACYAAgAAAAMAAAA=")
+tile_set = SubResource("TileSet_o00fh")
+script = ExtResource("2_ye3qi")
+metadata/_edit_horizontal_guides_ = [568.0, 656.0, 512.0, 672.0, 496.0, 737.0, 511.0, 513.0]
+metadata/_edit_vertical_guides_ = [688.0, 992.0, 191.0, 176.0, 176.0, 576.0, 592.0]
+
+[node name="sala tile" type="TileMapLayer" parent="." unique_id=89382683]
+tile_map_data = PackedByteArray("AAAXACEAAgADAAEAAAATACUAAgAAAAMAAAAXACUAAAAAAAEAAAAYACQAAAABAAAAAAAYACUAAAABAAEAAAAZACQAAAACAAAAAAAZACUAAAACAAEAAAAaACUAAAADAAEAAAA=")
+tile_set = SubResource("TileSet_g4v7s")
+
+[node name="player" parent="." unique_id=683432601 instance=ExtResource("2_dqtpf")]
+position = Vector2(842, 593)
+
+[node name="Camera2D" type="Camera2D" parent="player" unique_id=782917868]
+position = Vector2(0, 1)
+zoom = Vector2(4, 4)
+limit_left = 688
+limit_top = 496
+limit_right = 992
+limit_bottom = 672
+position_smoothing_enabled = true
+position_smoothing_speed = 1.0
+
+[node name="quarto player" type="Node2D" parent="." unique_id=159180872]
+
+[node name="fundo" type="ColorRect" parent="quarto player" unique_id=129163246]
+z_index = -1
+offset_left = 686.0
+offset_top = 495.0
+offset_right = 1002.0
+offset_bottom = 671.0
+color = Color(0.7254902, 0.5686275, 0.85882354, 1)
+
+[node name="prateleira" type="ColorRect" parent="quarto player" unique_id=480294246]
+z_index = -1
+offset_left = 811.0
+offset_top = 575.0
+offset_right = 838.0
+offset_bottom = 577.0
+color = Color(0.6156863, 0.4117647, 0.41568628, 1)
+
+[node name="Area2D" type="Area2D" parent="quarto player" unique_id=813604217]
+position = Vector2(685, 582)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="quarto player/Area2D" unique_id=1163554370]
+position = Vector2(4.5, 10.5)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="entrada quarto" type="Node2D" parent="quarto player" unique_id=1330048048]
+position = Vector2(705, 590)
+
+[node name="sala" type="Node2D" parent="." unique_id=1443575871]
+
+[node name="fundo" type="ColorRect" parent="sala" unique_id=94227512]
+z_index = -1
+offset_left = 167.0
+offset_top = 513.0
+offset_right = 600.0
+offset_bottom = 728.0
+color = Color(0.7411765, 0.72156864, 0.72156864, 1)
+
+[node name="entrada sala" type="Node2D" parent="sala" unique_id=11282598]
+position = Vector2(566, 590)
+
+[node name="voltar pro quarto" type="Area2D" parent="sala" unique_id=853644442]
+position = Vector2(576, 586)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sala/voltar pro quarto" unique_id=748600080]
+position = Vector2(14, 7)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="sair pra cidade" type="Area2D" parent="sala" unique_id=826247945]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sala/sair pra cidade" unique_id=1076546804]
+position = Vector2(178, 592.5)
+shape = SubResource("RectangleShape2D_yf5fn")
+
+[node name="DialogueArea2D" parent="." unique_id=200552717 instance=ExtResource("5_uum25")]
+activate_instant = true
+override_dialogue_position = true
+dialogue = Array[ExtResource("6_lgdna")]([SubResource("Resource_d0u6y"), SubResource("Resource_3gngh"), SubResource("Resource_fcnqv"), SubResource("Resource_lgdna")])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogueArea2D" unique_id=1793491819]
+position = Vector2(415.5, 585.5)
+shape = SubResource("RectangleShape2D_57qmd")
+
+[connection signal="body_entered" from="quarto player/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="sala/voltar pro quarto" to="." method="_on_voltar_pro_quarto_body_entered"]
+[connection signal="body_entered" from="sala/sair pra cidade" to="." method="_on_sair_pra_cidade_body_entered"]
